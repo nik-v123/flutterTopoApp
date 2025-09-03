@@ -1,5 +1,5 @@
 # flutterTopoApp
-An app to solve basic surveying problems.
+An app to solve basic surveying problems (and traverse).
 Μία εφαρμογή επίλυσης βασικών τοπογραφικών προβλημάτων (και όδευσης).
 Creator (Author): Nikos Ververidis
 Code licensed under Creative Commons Attribution 4.0 licence
