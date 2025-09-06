@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
                       _showInfoDialog(context);
                     },
                     child: const Text(
-                      'Info',
+                      'Πληροφορίες',
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -58,20 +58,21 @@ class _HomeState extends State<Home> {
               body: Padding(
                   padding: const EdgeInsets.all(30),
                   child: 
-                  //Column(children: <Widget>[
+                  SingleChildScrollView(child:
+                  Column(children: <Widget>[
                     //Expanded(
                         //child: 
-                        GridView.count(
-                      crossAxisCount: 2, // This sets the number of columns to 2
-                      crossAxisSpacing:
-                          30.0, // Horizontal spacing between items
-                      mainAxisSpacing: 30.0, // Vertical spacing between items
-                      children: <Widget>[
-                        //const SizedBox(
-                        //  height: 10,
-                        //),
-                        //Center(
-                        //    child:
+                        //GridView.count(
+                      //crossAxisCount: 2, // This sets the number of columns to 2
+                      //crossAxisSpacing:
+                      //    30.0, // Horizontal spacing between items
+                      //mainAxisSpacing: 30.0, // Vertical spacing between items
+                      //children: <Widget>[
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Center(
+                        child:
                         TextButton(
                             onPressed: () {
                               Navigator.push(
@@ -96,15 +97,15 @@ class _HomeState extends State<Home> {
                               'Πρώτο \nΘεμελιώδες',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 12.0),
+                                  fontSize: 10.0),
                               textAlign: TextAlign.center,
-                            )), //),
+                            )), ),
 
-                        //const SizedBox(
-                        //  height: 10,
-                        //),
-                        //Center(
-                        //    child:
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Center(
+                            child:
 
                         TextButton(
                             onPressed: () {
@@ -129,12 +130,12 @@ class _HomeState extends State<Home> {
                               'Δεύτερο\n Θεμελιώδες',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 12.0),
+                                  fontSize: 10.0),
                               textAlign: TextAlign.center,
-                            )), //),
-                        //const SizedBox(
-                        //  height: 10,
-                        //),
+                            )), ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         TextButton(
                             onPressed: () {
                               Navigator.push(
@@ -157,12 +158,12 @@ class _HomeState extends State<Home> {
                               'Εμπροσθοτομία',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 12.0),
+                                  fontSize: 10.0),
                               textAlign: TextAlign.center,
                             )),
-                        //const SizedBox(
-                        //  height: 10,
-                        //),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         TextButton(
                             onPressed: () {
                               Navigator.push(
@@ -185,15 +186,15 @@ class _HomeState extends State<Home> {
                               'Οπισθοτομία',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 12.0),
+                                  fontSize: 10.0),
                               textAlign: TextAlign.center,
                             )),
 
-                        //const SizedBox(
-                        //height: 10,
-                        //),
-                        //Center(
-                        //child:
+                        const SizedBox(
+                        height: 10,
+                        ),
+                        Center(
+                        child:
 
                         TextButton(
                             onPressed: () {
@@ -217,14 +218,14 @@ class _HomeState extends State<Home> {
                               'Επίλυση\n Όδευσης',
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 12.0),
+                                  fontSize: 10.0),
                               textAlign: TextAlign.center,
-                            )), //),
+                            )), ),
                       ],
-                    )),
+                    ))),
                     
-                  //])),
-            )));
+                  )),
+            );
   }
 }
 
@@ -233,7 +234,7 @@ void _showInfoDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('ΠΛηροφορίες εφαρμογής',style: TextStyle(fontSize: 20),),
+        title: const Text('Πληροφορίες εφαρμογής',style: TextStyle(fontSize: 20),),
         content: const Column(
           // The mainAxisSize property is important to prevent the Column from taking
           // up the full height of the dialog.
@@ -250,7 +251,7 @@ void _showInfoDialog(BuildContext context) {
               height: 30,
             ),
             const Text(
-              "Creator (Author): Nikos Ververidis\nFor non comercial use\nApp developed using Flutter framework",
+              "Creator: Nikos Ververidis\nApp developed using Flutter framework",
               style: TextStyle(
                 fontSize: 12,
               ),
@@ -259,7 +260,7 @@ void _showInfoDialog(BuildContext context) {
         ),
         actions: <Widget>[
           TextButton(
-            child: const Text('Close'),
+            child: const Text('Κλείσιμο'),
             onPressed: () {
               // Close the dialog
               Navigator.of(context).pop();
